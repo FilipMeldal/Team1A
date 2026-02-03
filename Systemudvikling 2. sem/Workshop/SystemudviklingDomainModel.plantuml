@@ -8,14 +8,10 @@ class Menu
     Tilføj Kunde
     Lejekontrakt
 }
-Menu "1" -- "1" Opretbiljournal
+Menu "1" -- "1*" Opretbiljournal
 Menu "1" -- "1" ÆndreStatus
-Menu "1" -- "1" TilføjKunde
-Menu "1" -- "1" Lejekontrakt
-
-
-
-
+Menu "1" -- "1*" TilføjKunde
+Menu "1" -- "1*" Lejekontrakt
 
 class Opretbiljournal 
 {
