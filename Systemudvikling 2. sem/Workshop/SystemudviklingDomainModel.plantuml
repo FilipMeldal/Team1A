@@ -1,4 +1,5 @@
 @startuml
+hide circle
 
 left to right direction
 class Menu
