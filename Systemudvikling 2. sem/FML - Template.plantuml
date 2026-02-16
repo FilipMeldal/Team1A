@@ -20,7 +20,7 @@ package "Infastructure"
     }
 }
 
-package "Customer frontend"
+package "CustomerFrontend"
 {
     class CustomerRelationships
     {
@@ -55,6 +55,8 @@ package "ProfitFormular"
 
 Infastructure -[hidden]right-> Value
 ProfitFormular -[hidden]up-> Value
+Value -[hidden]right-> CustomerFrontend
 
+KeyPartnerships <--> KeyActivities : De
 
 @enduml
