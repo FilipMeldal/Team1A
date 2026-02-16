@@ -48,7 +48,8 @@ KeyPartnerships -[hidden]down-> CostStructure
 
 KeyActivities -[hidden]down-> KeyResources
 KeyResources -[hidden]down-> CostStructure
-CustomerRelationships -[hidden]down-> Channels
+
+Channels -[hidden]down-> Channels
 Channels -[hidden]down-> RevenueStreams
 CustomerRelationships -[hidden]right-> CustomerSegments
 KeyResources -[hidden]down-> RevenueStreams
