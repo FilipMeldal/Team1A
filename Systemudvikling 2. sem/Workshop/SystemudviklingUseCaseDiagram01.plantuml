@@ -9,6 +9,10 @@ usecase "Opret Biljournal" as US1
 usecase "registrer Køretøjstatus" as US2
 usecase "Registrer Kunde" as US3
 usecase "Underskriv Lejekontrakt" as US4 
+<<<<<<< HEAD
+=======
+usecase "Udlever Bil" as US5
+>>>>>>> cb36527e6c4061f9258a908a409048425a2f9619
 }
   
 

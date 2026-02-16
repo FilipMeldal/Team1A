@@ -1,0 +1,9 @@
+@startuml
+
+class mennu
+{
+    opret - pjat
+    test - tasf
+}
+
+@enduml
