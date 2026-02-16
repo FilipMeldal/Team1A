@@ -1,6 +1,8 @@
 @startuml
 
 left to right direction
+skinparam classAttributeIconSize 0
+
 class Menu
 {
     Opret Bil-journal
@@ -8,14 +10,10 @@ class Menu
     Tilføj Kunde
     Lejekontrakt
 }
-Menu "1" -- "1" Opretbiljournal
+Menu "1" --- "1" Opretbiljournal
 Menu "1" -- "1" ÆndreStatus
 Menu "1" -- "1" TilføjKunde
-Menu "1" -- "1" Lejekontrakt
-
-
-
-
+Menu "1" -- "1" lblalb
 
 class Opretbiljournal 
 {
@@ -23,7 +21,8 @@ class Opretbiljournal
     Navn
     Mærke
     Målgruppe
-    Status
+    +Status
+    {method} OpretBiljournal()
 }
 
 class ÆndreStatus
