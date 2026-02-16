@@ -1,8 +1,11 @@
 @startuml
 
 left to right direction
+<<<<<<< HEAD
+=======
 skinparam classAttributeIconSize 0
 
+>>>>>>> cb36527e6c4061f9258a908a409048425a2f9619
 class Menu
 {
     Opret Bil-journal
@@ -10,10 +13,17 @@ class Menu
     Tilføj Kunde
     Lejekontrakt
 }
+<<<<<<< HEAD
+Menu "1" -- "1*" Opretbiljournal
+Menu "1" -- "1" ÆndreStatus
+Menu "1" -- "1*" TilføjKunde
+Menu "1" -- "1*" Lejekontrakt
+=======
 Menu "1" --- "1" Opretbiljournal
 Menu "1" -- "1" ÆndreStatus
 Menu "1" -- "1" TilføjKunde
 Menu "1" -- "1" lblalb
+>>>>>>> cb36527e6c4061f9258a908a409048425a2f9619
 
 class Opretbiljournal 
 {
@@ -21,8 +31,12 @@ class Opretbiljournal
     Navn
     Mærke
     Målgruppe
+<<<<<<< HEAD
+    Status
+=======
     +Status
     {method} OpretBiljournal()
+>>>>>>> cb36527e6c4061f9258a908a409048425a2f9619
 }
 
 class ÆndreStatus
