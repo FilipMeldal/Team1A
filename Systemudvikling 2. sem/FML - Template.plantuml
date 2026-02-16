@@ -1,0 +1,59 @@
+@startuml
+hide circle
+hide empty members
+
+class KeyPartnerships
+{
+    
+}
+
+class KeyActivities
+{
+
+}
+
+class ValueProposition
+{
+
+}
+class CustomerRelationships
+{
+
+}
+class Channels
+{
+
+}
+class CustomerSegments
+{
+
+}
+class CostStructure
+{
+}
+class RevenueStreams
+{
+}
+
+class KeyResources
+{
+}
+
+KeyPartnerships -[hidden]right-> KeyActivities
+KeyActivities -[hidden]right-> ValueProposition
+KeyActivities -[hidden]down-> CostStructure
+
+ValueProposition -[hidden]right-> CustomerRelationships
+CustomerRelationships -[hidden]right-> Channels
+KeyPartnerships -[hidden]down-> CostStructure
+
+KeyActivities -[hidden]down-> KeyResources
+KeyResources -[hidden]down-> CostStructure
+
+Channels -[hidden]down-> Channels
+Channels -[hidden]down-> RevenueStreams
+CustomerRelationships -[hidden]right-> CustomerSegments
+KeyResources -[hidden]down-> RevenueStreams
+
+ValueProposition -[hidden]right-> CustomerSegments
+@enduml
