@@ -1,44 +1,57 @@
 @startuml
 hide circle
 hide empty members
+skinparam PackageStyle rectangle
 
-class KeyPartnerships
+package "Infastructure"
 {
+    class KeyPartnerships
+    {
+        
+    }
+
+    class KeyActivities
+    {
     
+    }
+
+    class KeyResources
+    {
+    }
 }
 
-class KeyActivities
+package "Customer frontend"
 {
-   
+    class CustomerRelationships
+    {
+
+    }
+    class Channels
+    {
+
+    }
+    class CustomerSegments
+    {
+    }
 }
 
-class ValueProposition
+package "Value"
 {
+    class ValueProposition
+    {
 
-}
-class CustomerRelationships
-{
-
-}
-class Channels
-{
-
-}
-class CustomerSegments
-{
-
-}
-class CostStructure
-{
-}
-class RevenueStreams
-{
+    }
 }
 
-class KeyResources
+package "Profit formular"
 {
+    class CostStructure
+    {
+    }
+    class RevenueStreams
+    {
+    }
 }
-
 KeyPartnerships -[hidden]right-> KeyActivities
 KeyActivities -[hidden]right-> ValueProposition
 KeyActivities -[hidden]down-> CostStructure
@@ -56,4 +69,6 @@ CustomerRelationships -[hidden]right-> CustomerSegments
 KeyResources -[hidden]down-> RevenueStreams
 
 ValueProposition -[hidden]right-> CustomerSegments
+
+
 @enduml
