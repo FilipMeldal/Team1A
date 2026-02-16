@@ -1,0 +1,50 @@
+@startuml
+skinparam classAttributeIconSize 0
+hide circle
+left to right direction
+class Menu
+{
+    Opret Bil-journal
+    Ændre bil-Status
+    Tilføj Kunde
+    Lejekontrakt
+}
+Menu "1" -- "1*" Opretbiljournal
+Menu "1" -- "1" ÆndreStatus
+Menu "1" -- "1*" TilføjKunde
+Menu "1" -- "1*" Lejekontrakt
+
+class Opretbiljournal 
+{
+    +Kategori 
+    +Navn
+    -Mærke
+    Målgruppe
+    Status
+}
+
+class ÆndreStatus
+{
+    Tilgængelig
+}
+
+class TilføjKunde
+{
+    Navn
+    Tlf
+    Mail
+    Køretøj
+
+}
+
+class Lejekontrakt
+{
+    Navn
+    Tlf
+    Mail
+    Køretøj
+    Print
+}
+
+
+@enduml
