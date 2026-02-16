@@ -4,39 +4,49 @@ hide empty members
 
 class KeyPartnerships
 {
-    
+    Der er distrubutions partnerskab mellem 
+    forskellige bil producenter 
 }
 
 class KeyActivities
 {
-
+    De tilbyder en hurtig og nem måde at leje biler på
 }
 
 class ValueProposition
 {
-
+    De tilbyder en hurtig og nem måde at leje biler på
+    De har en bred vifte af biler
 }
 class CustomerRelationships
 {
-
+    Kundeerhvervelse: gennem reklame
+    Betjening: gennem fysisk butik, telefonisk kontakt og mail
+    Testversion: gennem eftersyn med bil inspektør
 }
 class Channels
 {
-
+    De har egne kanaler: i form af en hjemmeside, og en fysisk butik.
+    Samt telefonisk kontakt og mail
 }
 class CustomerSegments
 {
-
+    Deres henvendelse er segmenteret: i form af privatpersoner 
 }
 class CostStructure
 {
+    Der er faste omkostninger: i form af lønninger, og grunden
+    Der er variable omkostninger: i form af indkøb, vedligeholdelse, reparationer og tankning af biler
 }
 class RevenueStreams
 {
+    Der er engangsindtægt: i form af lejeindtægter
 }
 
 class KeyResources
 {
+    De har fysiske ressourcer: i form af biler, og en fysisk butik
+    De har menneskelige ressourcer: i form af ansatte
 }
 
 KeyPartnerships -[hidden]right-> KeyActivities
