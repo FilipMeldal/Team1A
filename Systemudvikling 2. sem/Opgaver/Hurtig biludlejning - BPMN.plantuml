@@ -1,19 +1,46 @@
 @startuml
-start
 
-:kunden kontakter kundeservice for at leje en bil;
-:kundeservice opretter en lejeaftale;
-:bilen bliver reseveret;
-:kunden henter bilen og underskriver lejeaftalen;
-:kunden bruger bilen i aftalt periode;
-:kunden tanker bilen op;
-:kunden afleverer bilen;
-:bilen rengøres og tjekkes for skader og fejl;
+|#Gray|k| Kunde
+|#Red|ks| Kunde Service
+|#Green|i| Inspektør
+
+|k|
+start
+:Kunden kontakter kundeservice for at leje en bil;
+
+|ks|
+:Kundeservice opretter en lejeaftale;
+:Bilen bliver reseveret;
+
+|k|
+:Kunden ankommer til butikken for at hente bilen;
+if (Er kunden ankommet?) then (ja)
+    :Kunden bliver modtaget af inspektøren;
+else (nej)
+    :Kunden modtager en regningen;
+    stop
+end if
+
+|i|
+:Inspektøren tjekker bilen for skader og fejl sammen med kunden;
+if (Er bilen i orden?) then (ja)
+    :Kunden underskriver lejeaftalen;
+else (nej)
+    :Skader og fejl bliver noteret, og kunden underskriver lejeaftalen;
+end if
+
+|k|
+:Kunden bruger bilen i aftalt periode;
+:Kunden tanker bilen op;
+:Kunden afleverer bilen;
+
+|ks|
+:Bilen rengøres og tjekkes for skader og fejl;
 
 if (Er bilen i orden?) then (ja)
-    :bilen bliver gjort klar til næste kunde;
+    :Bilen bliver gjort klar til næste kunde;
 else (nej)
-    :kunden tilsendes regningen, og bilen sendes til reparation;
+    :Kunden tilsendes regningen, og bilen sendes til reparation;
 end if
 
 stop
