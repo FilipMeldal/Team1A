@@ -22,7 +22,6 @@ class CustomerRelationships
 {
     Kundeerhvervelse: gennem reklame
     Betjening: gennem fysisk butik, telefonisk kontakt og mail
-    Testversion: gennem eftersyn med bil inspektør
 }
 class Channels
 {
