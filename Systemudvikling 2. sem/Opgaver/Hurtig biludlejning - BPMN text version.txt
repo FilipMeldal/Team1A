@@ -1,5 +1,3 @@
-@startuml
-
 |#Gray|k| Kunde
 |#Red|ks| Kunde Service
 |#Green|i| Inspektør
@@ -43,4 +41,3 @@ else (nej)
 end if
 
 stop
-@enduml
