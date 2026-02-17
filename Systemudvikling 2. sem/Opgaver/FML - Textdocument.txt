@@ -1,0 +1,38 @@
+FML:
+
+KeyPartnerships: 
+"Der er distrubutions partnerskab mellem 
+forskellige bil producenter"
+
+
+KeyActivities:
+"De tilbyder en hurtig og nem måde at leje biler på"
+
+
+ValueProposition:
+"De tilbyder en hurtig og nem måde at leje biler på
+ De har en bred vifte af biler"
+
+
+CustomerRelationships:
+"Kundeerhvervelse: gennem reklame
+ Betjening: gennem fysisk butik, telefonisk kontakt og mail"
+
+Channels:
+"De har egne kanaler: i form af en hjemmeside, og en fysisk butik.
+ Samt telefonisk kontakt og mail"
+
+
+CustomerSegments:
+"Deres henvendelse er segmenteret: i form af privatpersoner"
+
+CostStructure:
+"Der er faste omkostninger: i form af lønninger, og grunden
+ Der er variable omkostninger: i form af indkøb, vedligeholdelse, reparationer og tankning af biler"
+
+RevenueStreams:
+"Der er engangsindtægt: i form af lejeindtægter"
+
+KeyResources:
+"De har fysiske ressourcer: i form af biler, og en fysisk butik
+ De har menneskelige ressourcer: i form af ansatte"
