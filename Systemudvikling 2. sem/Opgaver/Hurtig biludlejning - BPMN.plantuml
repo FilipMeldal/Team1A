@@ -1,0 +1,20 @@
+@startuml
+start
+
+:kunden kontakter kundeservice for at leje en bil;
+:kundeservice opretter en lejeaftale;
+:bilen bliver reseveret;
+:kunden henter bilen og underskriver lejeaftalen;
+:kunden bruger bilen i aftalt periode;
+:kunden tanker bilen op;
+:kunden afleverer bilen;
+:bilen rengøres og tjekkes for skader og fejl;
+
+if (Er bilen i orden?) then (ja)
+    :bilen bliver gjort klar til næste kunde;
+else (nej)
+    :kunden tilsendes regningen, og bilen sendes til reparation;
+end if
+
+stop
+@enduml
