@@ -4,47 +4,81 @@ hide circle
 left to right direction
 hide empty members
 
-class CUSTOMER
+
+ROW "1" -- "1*" SCREEN  
+SEAT "1" -- "1*" ROW
+CUSTOMER "0*" -- "0-1" CINEMA
+CINEMA "1" -- "0*" EMPLOYEE
+CINEMA "1" -- "1*" SCREEN
+SCREEN "0*" -- "0-1" MOVIE
+ADMIN "1" -- "4" CINEMA
+
+
+
+class CINEMA
+{
+    Address : NVarChar(30)
+    Tlf : NVarChar(15)
+    Mail : NVarChar(30)
+    
+}
+
+
+class CUSTOMER <<table>>
 {
     <<PK>><<surrogate>> CustomerID : int
-    Name : NVarChar(20) 
+    Name : NVarChar(20)    
     Tlf : NVarChar(16)
+    ..
+    <<PK>> PK_Customer()
 }
 
-class SCREEN  <<Table>> 
+class SCREEN  <<table>> 
 {
     <<PK>>ScreenNumber : int
+    ..
+    <<PK>> PK_Screen()
 }
 
-class ROW <<Table>>
+class ROW <<table>>
 {
     <<PK>> ROW : int
+    ..
+    <<PK>> PK_Row()
 }
 
-class SEAT <<Table>>
+class SEAT <<table>>
 {
     <<PK>> SeatNumber : int
     Available : Bit
+    ..
+    <<PK>> PK_Seat()
 }
 
-class MOVIE <<Table>>
+class MOVIE <<table>>
 {
     <<PK>><<surrogate>> MovieID : int
     Title : NVarChar(30)
-    Length : Time
+    <<surrogate>>Length : Time
+    ..
+    <<PK>> PK_Movie()
 }
 
-class ADMIN <<Table>>
+class ADMIN <<table>>
 {
     <<PK>> Username : NVarChar(20) 
     Password : NVarChar(20) 
+    ..
+    <<PK>> PK_Admin()
 }
 
-class EMPLOYEE <<Table>>
+class EMPLOYEE <<table>>
 {
     <<PK>> EmployeeID : int
     Salary : double
     Name : NVarChar(20)
+    ..
+    <<PK>> PK_Employee()
 }
 
 
