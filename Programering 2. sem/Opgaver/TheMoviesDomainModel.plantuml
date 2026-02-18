@@ -1,0 +1,51 @@
+@startuml
+
+hide circle
+left to right direction
+hide empty members
+
+class CUSTOMER
+{
+    <<PK>><<surrogate>> CustomerID : int
+    Name : NVarChar(20) 
+    Tlf : NVarChar(16)
+}
+
+class SCREEN  <<Table>> 
+{
+    <<PK>>ScreenNumber : int
+}
+
+class ROW <<Table>>
+{
+    <<PK>> ROW : int
+}
+
+class SEAT <<Table>>
+{
+    <<PK>> SeatNumber : int
+    Available : Bit
+}
+
+class MOVIE <<Table>>
+{
+    <<PK>><<surrogate>> MovieID : int
+    Title : NVarChar(30)
+    Length : Time
+}
+
+class ADMIN <<Table>>
+{
+    <<PK>> Username : NVarChar(20) 
+    Password : NVarChar(20) 
+}
+
+class EMPLOYEE <<Table>>
+{
+    <<PK>> EmployeeID : int
+    Salary : double
+    Name : NVarChar(20)
+}
+
+
+@enduml
