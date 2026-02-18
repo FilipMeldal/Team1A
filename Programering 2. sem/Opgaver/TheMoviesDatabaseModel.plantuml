@@ -5,23 +5,14 @@ left to right direction
 hide empty members
 
 
-ROW "1" -- "1*" SCREEN  
-SEAT "1" -- "1*" ROW
-CUSTOMER "0*" -- "0-1" CINEMA
-CINEMA "1" -- "0*" EMPLOYEE
-CINEMA "1" -- "1*" SCREEN
-SCREEN "0*" -- "0-1" MOVIE
-ADMIN "1" -- "4" CINEMA
-
-
-
-class CINEMA
-{
-    Address : NVarChar(30)
-    Tlf : NVarChar(15)
-    Mail : NVarChar(30)
-    
-}
+ROW "1" -- "*" SCREEN  
+SEAT "1" -- "*" ROW
+CINEMA "1" -- "*" CUSTOMER_CINEMA
+CUSTOMER "1" -- "*" CUSTOMER_CINEMA
+CINEMA "1" -- "*" EMPLOYEE
+CINEMA "1" -- "*" SCREEN
+SCREEN "*" -- "1" MOVIE
+ADMIN "1" -- "*" CINEMA
 
 
 class CUSTOMER <<table>>
@@ -31,6 +22,38 @@ class CUSTOMER <<table>>
     Tlf : NVarChar(16)
     ..
     <<PK>> PK_Customer()
+
+}
+
+class CINEMA <<table>>
+{
+    <<PK>> Address : NVarChar(30)
+    Tlf : NVarChar(15)
+    Mail : NVarChar(30)
+    ..
+    <<PK>> PK_Cinema()
+    <<FK>> FK_Cinema_Admin(Username)
+}
+
+class CUSTOMER_CINEMA <<table>>
+{
+    <<PK>> <<FK1>> CustomerID : int
+    <<PK>> <<FK2>>Address : NVarChar(30)
+    ..
+    <<PK>> PK_CustomerCinema()
+    <<FK1>> FK_CustomerCinema_Customer(CustomerID)
+    <<FK2>> FK_CustomerCinema_Cinema(Address)
+
+}
+
+class EMPLOYEE <<table>>
+{
+    <<PK>> EmployeeID : int
+    Salary : double
+    Name : NVarChar(20)
+    ..
+    <<PK>> PK_Employee()
+    <<FK>> FK_Employee_Cinema(Address)
 }
 
 class SCREEN  <<table>> 
@@ -38,11 +61,14 @@ class SCREEN  <<table>>
     <<PK>>ScreenNumber : int
     ..
     <<PK>> PK_Screen()
+    <<FK>> FK_Screen_Cinema(Address)
+    <<FK>> FK_Screen_Row(RowNumber)
+    <<FK>> FK_Screen_Movie(MovieID)
 }
 
 class ROW <<table>>
 {
-    <<PK>> ROW : int
+    <<PK>> RowNumber : int
     ..
     <<PK>> PK_Row()
 }
@@ -53,6 +79,7 @@ class SEAT <<table>>
     Available : Bit
     ..
     <<PK>> PK_Seat()
+    <<FK>> FK_Seat_Row(RowNumber)
 }
 
 class MOVIE <<table>>
@@ -70,15 +97,6 @@ class ADMIN <<table>>
     Password : NVarChar(20) 
     ..
     <<PK>> PK_Admin()
-}
-
-class EMPLOYEE <<table>>
-{
-    <<PK>> EmployeeID : int
-    Salary : double
-    Name : NVarChar(20)
-    ..
-    <<PK>> PK_Employee()
 }
 
 
