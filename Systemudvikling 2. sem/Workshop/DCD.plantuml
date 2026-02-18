@@ -1,6 +1,7 @@
 @startuml
-skinparam classAttributeIconSize 0
 hide circle
+hide method
+skinparam classAttributeIconSize 0
 left to right direction
 class Menu
 {
@@ -9,7 +10,7 @@ class Menu
     Tilføj Kunde
     Lejekontrakt
 }
-Menu "1" -- "1*" Opretbiljournal
+Menu "1" --- "1*" Opretbiljournal
 Menu "1" -- "1" ÆndreStatus
 Menu "1" -- "1*" TilføjKunde
 Menu "1" -- "1*" Lejekontrakt
@@ -17,10 +18,10 @@ Menu "1" -- "1*" Lejekontrakt
 class Opretbiljournal 
 {
     +Kategori 
-    +Navn
+    -Navn
     -Mærke
     Målgruppe
-    Status
+    + Status
 }
 
 class ÆndreStatus
