@@ -49,7 +49,7 @@ class CUSTOMER_CINEMA <<table>>
 class EMPLOYEE <<table>>
 {
     <<PK>> EmployeeID : int
-    Salary : double
+    Salary : Float
     Name : NVarChar(20)
     ..
     <<PK>> PK_Employee()
@@ -86,7 +86,7 @@ class MOVIE <<table>>
 {
     <<PK>><<surrogate>> MovieID : int
     Title : NVarChar(30)
-    <<surrogate>>Length : Time
+    Length : Time
     ..
     <<PK>> PK_Movie()
 }
