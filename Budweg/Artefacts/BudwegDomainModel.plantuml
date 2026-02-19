@@ -2,10 +2,6 @@
 hide circle
 hide empty members
 
-Dashboard "1" -- "1" Co2Udledning
-Dashboard "1" -- "1" Affald
-Dashboard "1" -- "1" Energiforbrug
-Dashboard "1" -- "0..*" Bremsekaliber
 Co2Udledning "1..*" -- "0..*" Bremsekaliber
 Affald "1..*" -- "0..*" Bremsekaliber
 Energiforbrug "1..*" -- "0..*" Bremsekaliber
@@ -17,28 +13,19 @@ Class Bremsekaliber
     komponenter
 }
 
-Class Dashboard
-{
-    bæredygtighedsdata
-    graf
-}
-
 Class Co2Udledning 
 {
-    graf
     udledning
 }
 
 Class Affald
 {
-    graf
     vægt
     råmateriale
 }
 
 Class Energiforbrug
 {
-    graf
     watt
 }
 
