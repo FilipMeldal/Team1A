@@ -4,8 +4,15 @@ usecase (Dashboard) as Dashboard
 usecase (Affald) as Affald
 usecase (Co2) as Co2
 usecase (Energi) as Energi
-usecase (Bremsekalibre) as Bremsekalibre
+usecase (Bremsekaliber) as Bremsekaliber
 
+Dashboard -up- Affald
+Dashboard -right- Co2
+Dashboard -right- Energi
+Dashboard -right- Bremsekaliber
 
+Bremsekaliber -left- Energi
+Bremsekaliber -down- Co2
+Bremsekaliber -up- Affald
 
 @enduml
