@@ -1,9 +1,7 @@
 @startuml
 hide circle
+hide empty members
 
-
-
-Dashboard "1" -- "1" Admin
 Dashboard "1" -- "1" Co2Udledning
 Dashboard "1" -- "1" Affald
 Dashboard "1" -- "1" Energiforbrug
@@ -12,19 +10,12 @@ Co2Udledning "1..*" -- "0..*" Bremsekaliber
 Affald "1..*" -- "0..*" Bremsekaliber
 Energiforbrug "1..*" -- "0..*" Bremsekaliber
 
-
 Class Bremsekaliber
 {
     vægt
     råmateriale
     komponenter
 }
-
-Class Admin
-{
-    navn
-}
-
 
 Class Dashboard
 {
@@ -50,7 +41,6 @@ Class Energiforbrug
     graf
     watt
 }
-
 
 
 @enduml

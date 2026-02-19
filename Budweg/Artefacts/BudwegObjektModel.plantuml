@@ -1,0 +1,11 @@
+@startuml
+
+usecase (Dashboard) as Dashboard
+usecase (Affald) as Affald
+usecase (Co2) as Co2
+usecase (Energi) as Energi
+usecase (Bremsekalibre) as Bremsekalibre
+
+
+
+@enduml
