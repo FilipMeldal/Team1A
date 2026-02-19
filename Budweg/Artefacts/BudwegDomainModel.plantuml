@@ -15,7 +15,6 @@ Energiforbrug "1..*" -- "0..*" Bremsekaliber
 
 Class Bremsekaliber
 {
-    id
     vægt
     råmateriale
     komponenter
@@ -23,7 +22,6 @@ Class Bremsekaliber
 
 Class Admin
 {
-    id
     navn
 }
 
