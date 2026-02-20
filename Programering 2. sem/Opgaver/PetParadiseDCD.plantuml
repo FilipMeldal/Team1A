@@ -1,0 +1,69 @@
+@startuml
+hide circles
+skinparam ClassAttributeIconSize 0
+
+
+class Pet
+{
+    name : string 
+    type : string 
+    breed : string 
+    dateofbirth : DateOnly
+    weight : double
+    
+}
+
+class Owner
+{
+    lastname : string 
+    firstname : string 
+    phone : string
+    email : string 
+}
+
+Class Service
+{
+    type : string 
+    date : DateTime
+}
+
+Class Charge 
+{
+    amount : double 
+}
+
+
+
+Class PetRepository
+{
+
+}
+
+Class OwnerRepository
+{
+
+}
+
+Class Controller <<controller>>
+{
+    -  _ownerRepository : OwnerRepository
+    - _petRepository : PetRepository
+    ..
+    + PetAdd(pet)
+    + PetDelete(pet)
+    + OwnerAdd(owner) 
+    + OwnerDelete(owner)
+
+}
+
+
+
+
+
+Owner  -- Pet
+Pet -- Service
+Charge  -- Owner
+Controller -- PetRepository
+Controller -- OwnerRepository
+
+@enduml
