@@ -1,9 +1,11 @@
 @startuml
 hide circles
 skinparam ClassAttributeIconSize 0
+skinparam PackageBorderStyle dashed
 
-
-class Pet
+Package DomainLayer
+{
+    class Pet
 {
     name : string 
     type : string 
@@ -32,16 +34,29 @@ Class Charge
     amount : double 
 }
 
+}
 
-
+Package ApplicationLayer
+{
+    
 Class PetRepository
 {
-
+    pets : List<Pet>
+    ..
+    + Create(pet : Pet)
+    + GetAll()
+    + Update(pet : Pet)
+    + Delete(pet : Pet)
 }
 
 Class OwnerRepository
 {
-
+    owners : List<Owner>
+    ..
+    + Create(owner : Owner)
+    + GetAll()
+    + Update(owner : Owner)
+    + Delete(owner : Owner)
 }
 
 Class Controller <<controller>>
@@ -49,15 +64,13 @@ Class Controller <<controller>>
     -  _ownerRepository : OwnerRepository
     - _petRepository : PetRepository
     ..
-    + PetAdd(pet)
-    + PetDelete(pet)
-    + OwnerAdd(owner) 
-    + OwnerDelete(owner)
+    + PetAdd(pet : Pet)
+    + PetDelete(pet : Pet)
+    + OwnerAdd(owner : Owner) 
+    + OwnerDelete(owner : Owner)
 
 }
-
-
-
+}
 
 
 Owner  -- Pet
@@ -65,5 +78,7 @@ Pet -- Service
 Charge  -- Owner
 Controller -- PetRepository
 Controller -- OwnerRepository
+
+ApplicationLayer -right[hidden]- DomainLayer
 
 @enduml
