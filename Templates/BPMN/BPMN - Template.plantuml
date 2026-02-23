@@ -1,0 +1,9 @@
+@startuml
+
+|#Gray|k| Kunde
+|#Red|ks| Kunde Service
+|#Green|i| Inspektør
+start
+
+stop
+@enduml
