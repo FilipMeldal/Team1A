@@ -3,6 +3,7 @@ hide circle
 hide method
 
 
+
 Vikar "0..*" -- "0..*" Kalender
 Skole "0..*" -- "0..*" Vikar
 Vikar "0..*" -- "0..*" Arbejdstid

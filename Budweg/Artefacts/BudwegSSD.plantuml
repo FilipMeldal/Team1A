@@ -1,0 +1,19 @@
+@startuml
+hide empty method
+
+Actor ": Ledelse" as L
+participant ":System" as S
+
+L -> S: VisBD(list <Bremsekal>)  
+note right: BD: Bæredygtighedsdata
+S --> L: System viser BD(e,c,a)
+note right: e: energi, c: Co2-udledning, a: affaldstyper
+L -> S: Tryk "Vis detaljer"
+S --> L: "System viser graf"
+hide footbox
+
+
+
+
+
+@enduml
