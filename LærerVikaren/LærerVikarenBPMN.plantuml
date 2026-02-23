@@ -1,0 +1,37 @@
+@startuml
+
+|#White|s| Skole
+|#White|g| Gunbritt
+|#white|k| Kalender
+|#white|v| Vikar
+
+|s|
+start
+:Ringer til Gunbritt;
+|g|
+:Tager tlf;
+:-Finder kompetencer der matcher skolens behov
+-Finder ledige vikarer;
+|k|
+:Viser liste over alle vikarer;
+|g|
+:-Modtager liste over vikarer
+-Vælger vikar;
+if( Der er en ledig vikar) then (nej)
+|g|
+    :Informerer skolen om at der ikke er nogen ledige vikarer;
+|s|
+    :Modtager besked om at der ikke er nogen ledige vikarer;
+    stop
+else (ja)
+    |g|
+    :Informerer vikar;
+    |v|
+    :Modtager information;
+    :Tager til skolen;
+|s|
+    :Modtager vikar;
+stop
+
+
+@enduml
