@@ -1,0 +1,47 @@
+@startuml
+hide circle
+hide method
+
+
+Vikar "0..*" -- "0..*" Kalender
+Skole "0..*" -- "0..*" Vikar
+Vikar "0..*" -- "0..*" Arbejdstid
+
+
+Class Vikar 
+{
+    navn
+    tlf
+    cpr
+    alder
+    fag
+}
+
+
+Class Kalender 
+{
+    tilrådighed
+    arbejdstid
+    dato
+    fag
+}
+
+Class Arbejdstid
+{
+    timer
+}
+
+
+Class Skole
+{
+    Navn
+    Adresse
+    By
+    Email
+    Tlf
+}
+
+
+
+
+@enduml
