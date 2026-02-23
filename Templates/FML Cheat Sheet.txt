@@ -1,0 +1,65 @@
+Kunderne (Højre side af modellen)
+Fokus her er på, hvem du sælger til, og hvordan du interagerer med dem.
+
+1. Kundesegmenter (Customer Segments)
+
+Hvad skal der stå: Her beskriver du din målgruppe. Hvem skaber du værdi for?
+
+Spørgsmål at overveje: Er det privatpersoner (B2C) eller virksomheder (B2B)? Er det et nichemarked eller massemarked? Hvad kendetegner dine allervigtigste kunder (alder, interesser, geografi, branche)?
+
+2. Kunderelationer (Customer Relationships)
+
+Hvad skal der stå: Hvordan du vil interagere med dine kunder før, under og efter et køb.
+
+Spørgsmål at overveje: Skal det være personlig betjening, fuld selvbetjening, et online community, eller dedikeret support (som en Key Account Manager)? Hvordan fastholder du kunderne?
+
+3. Kanaler (Channels)
+
+Hvad skal der stå: Hvordan dine produkter/ydelser når frem til kunderne.
+
+Spørgsmål at overveje: Hvordan finder kunderne dig (fx sociale medier, SEO, annoncer)? Hvor køber de produktet (webshop, fysisk butik, gennem forhandlere)? Hvordan leveres det?
+
+Værdien (Midten af modellen)
+Dette er hjertet i din forretningsmodel.
+
+4. Værditilbud (Value Propositions)
+
+Hvad skal der stå: Hvorfor kunderne skal vælge lige netop dig. Dette er ikke bare dit produkt, men det problem du løser, eller det behov du dækker.
+
+Spørgsmål at overveje: Tilbyder du det bedste design, den laveste pris, den højeste bekvemmelighed, bedre ydeevne eller måske status? Hvad gør dig unik i forhold til konkurrenterne?
+
+Maskinrummet (Venstre side af modellen)
+Fokus her er på alt det bagvedliggende, der skal til for at levere værdien.
+
+5. Nøgleaktiviteter (Key Activities)
+
+Hvad skal der stå: De absolut vigtigste opgaver, din virksomhed skal udføre for at få modellen til at fungere.
+
+Spørgsmål at overveje: Er I en produktionsvirksomhed (design og fremstilling)? Leverer I en service/problemløsning (fx konsulentbureau)? Eller driver I en platform (fx en app eller et netværk)?
+
+6. Nøgleressourcer (Key Resources)
+
+Hvad skal der stå: De aktiver, du har brug for, for at kunne udføre nøgleaktiviteterne.
+
+Spørgsmål at overveje: Hvad kræver det fysisk (maskiner, lokaler), intellektuelt (patenter, software, varemærker), menneskeligt (specialister, udviklere) og økonomisk (startkapital)?
+
+7. Nøglepartnere (Key Partnerships)
+
+Hvad skal der stå: Dine vigtigste leverandører og samarbejdspartnere, som får forretningen til at køre rundt.
+
+Spørgsmål at overveje: Hvem outsourcer I opgaver til (fx et fragtfirma eller et marketingbureau)? Hvem leverer jeres råvarer? Har I strategiske alliancer med andre virksomheder?
+
+Økonomien (Bunden af modellen)
+Her kigger du på pengene ind og pengene ud.
+
+8. Omkostningsstruktur (Cost Structure)
+
+Hvad skal der stå: De vigtigste og største omkostninger forbundet med at drive forretningen.
+
+Spørgsmål at overveje: Hvad er jeres faste omkostninger (husleje, faste lønninger, forsikringer)? Hvad er de variable omkostninger (materialer, provision, fragt)? Er I drevet af at minimere omkostninger (som et discountsupermarked) eller at skabe stor værdi (som et luksusbrand)?
+
+9. Indtægtsstrømme (Revenue Streams)
+
+Hvad skal der stå: Hvordan I rent faktisk tjener penge.
+
+Spørgsmål at overveje: Tager I en engangspris for et produkt? Har I en abonnementsmodel? Tjener I på leasing, licenser, formidlingsgebyrer eller måske annoncering? Hvad er kunderne reelt villige til at betale?
