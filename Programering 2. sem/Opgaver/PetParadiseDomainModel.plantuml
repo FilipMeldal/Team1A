@@ -1,0 +1,38 @@
+@startuml
+hide circles
+hide methods
+left to right direction
+
+class Pet 
+{
+    name
+    type
+    breed
+    dateOfBirth
+    weight
+}
+
+class Owner
+{
+    lastName
+    firstName
+    phone
+    email
+}
+
+Class Service
+{
+    type
+    date
+}
+
+Class Charge
+{
+    amount
+}
+
+Owner "1" -- "1..*" Pet
+Pet "1" -- "*" Service
+Charge "*" -- "1" Owner
+
+@enduml
