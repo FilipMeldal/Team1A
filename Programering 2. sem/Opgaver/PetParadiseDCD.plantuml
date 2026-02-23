@@ -3,6 +3,40 @@ hide circles
 skinparam ClassAttributeIconSize 0
 skinparam PackageBorderStyle dashed
 
+Package ApplicationLayer
+{
+    
+Class PetRepository
+{
+    pets : List<Pet>
+    ..
+    + Create(pet : Pet)
+    + Update(pet : Pet)
+    + Delete(pet : Pet)
+}
+
+Class OwnerRepository
+{
+    owners : List<Owner>
+    ..
+    + Create(owner : Owner)
+    + Update(owner : Owner)
+    + Delete(owner : Owner)
+}
+
+Class Controller <<controller>>
+{
+    -  _ownerRepository : OwnerRepository
+    - _petRepository : PetRepository
+    ..
+    + PetAdd(pet : Pet)
+    + PetDelete(pet : Pet)
+    + OwnerAdd(owner : Owner) 
+    + OwnerDelete(owner : Owner)
+    + GetAll ()
+}
+}
+
 Package DomainLayer
 {
     class Pet
@@ -36,49 +70,14 @@ Class Charge
 
 }
 
-Package ApplicationLayer
-{
-    
-Class PetRepository
-{
-    pets : List<Pet>
-    ..
-    + Create(pet : Pet)
-    + GetAll()
-    + Update(pet : Pet)
-    + Delete(pet : Pet)
-}
+Owner --> Pet
+Pet --> Service
+Charge  <-- Owner
+Controller -down-> PetRepository
+Controller -up-> OwnerRepository
+OwnerRepository --> Owner
+PetRepository --> Pet
 
-Class OwnerRepository
-{
-    owners : List<Owner>
-    ..
-    + Create(owner : Owner)
-    + GetAll()
-    + Update(owner : Owner)
-    + Delete(owner : Owner)
-}
-
-Class Controller <<controller>>
-{
-    -  _ownerRepository : OwnerRepository
-    - _petRepository : PetRepository
-    ..
-    + PetAdd(pet : Pet)
-    + PetDelete(pet : Pet)
-    + OwnerAdd(owner : Owner) 
-    + OwnerDelete(owner : Owner)
-
-}
-}
-
-
-Owner  -- Pet
-Pet -- Service
-Charge  -- Owner
-Controller -- PetRepository
-Controller -- OwnerRepository
-
-ApplicationLayer -right[hidden]- DomainLayer
+ApplicationLayer -up[hidden]-  DomainLayer
 
 @enduml
