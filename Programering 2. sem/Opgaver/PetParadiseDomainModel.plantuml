@@ -8,14 +8,14 @@ class Pet
     name
     type
     breed
-    dateofbirth
+    dateOfBirth
     weight
 }
 
 class Owner
 {
-    lastname
-    firstname
+    lastName
+    firstName
     phone
     email
 }
