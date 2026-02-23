@@ -1,6 +1,7 @@
 @startuml
 hide empty method
 
+
 Actor ": Ledelse" as L
 participant ":System" as S
 
@@ -8,12 +9,12 @@ L -> S: VisBD(list <Bremsekal>)
 note right: BD: Bæredygtighedsdata
 S --> L: System viser BD(e,c,a)
 note right: e: energi, c: Co2-udledning, a: affaldstyper
-L -> S: Tryk "Vis detaljer"
+
+group Alt [Valg af \n bæredygtighedsdata]
+L -> S: VisDetaljeretOversigt(b) 
+note right: b: alle bæredygtigheds energityper
 S --> L: "System viser graf"
 hide footbox
-
-
-
-
+end
 
 @enduml
