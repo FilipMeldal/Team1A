@@ -7,16 +7,17 @@ package "Infastructure"
 {
     class KeyPartnerships
     {
-        
+        De har et tæt sammerbejder med folkeskoler samt lærestuderende uddanelses steder   
     }
 
     class KeyActivities
     {
-    
+        De finder og ansætter lærestudenrende
     }
 
     class KeyResources
     {
+        Deres excel ark
     }
 }
 
@@ -24,14 +25,16 @@ package "CustomerFrontend"
 {
     class CustomerRelationships
     {
-
+        De har telefonisk kontakt med både folkeskolerne og lærevikarene
     }
     class Channels
     {
+        De har et telefon nummer som både folkeskolerne og lærevikarene kan ringe til for at få hjælp
 
     }
     class CustomerSegments
     {
+        De har to kunde segmenter, nemlig folkeskolerne og lærevikarene
     }
 }
 
@@ -39,7 +42,7 @@ package "Value"
 {
     class ValueProposition
     {
-
+        Det er en virksomhed der tilbyder lærevikarer til folkeskoler
     }
 }
 
@@ -47,9 +50,12 @@ package "ProfitFormular"
 {
     class CostStructure
     {
+        De har lønninger til de ansatte, som er inde på deres kontor
+
     }
     class RevenueStreams
     {
+        Betaling fra folkeskolerne for at få en lærevikar ud til dem
     }
 }
 
