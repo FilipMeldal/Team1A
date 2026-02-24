@@ -3,6 +3,7 @@ left to right direction
 
 'Aktører
 actor Medarbejder as m
+actor Ledelse as l
 
 'Projekt navn >
 package LærerVikaren { 
@@ -10,11 +11,13 @@ package LærerVikaren {
 'Use cases
 usecase "Send Lærervikar" as US1
 usecase "Registrer Ledighed" as US2
+usecase "Slet Lærervikar" as US3
 }
 
 'Pile
 m --> US1
 m --> US2
+l --> US3
 
 
 
