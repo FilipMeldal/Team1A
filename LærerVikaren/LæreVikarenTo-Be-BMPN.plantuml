@@ -1,0 +1,45 @@
+@startuml
+
+|#White|s| Skole
+|#White|g| Gunbritt
+|#white|st| System
+|#white|v| Vikar
+
+|s|
+start
+:Ringer til Gunbritt;
+
+|g|
+:Tager tlf;
+:-Indtaster faglige kompetancer for vikaren;
+
+|st|
+:Viser liste over alle vikarer ud fra faglie kompetancer
+og ledighed for den givende dag;
+
+|g|
+:-Modtager liste over vikarer;
+:Vælger ledig vikar;
+
+|st|
+:Sender besked til vikar;
+
+if( Der er en ledig vikar) then (nej)
+|g|
+    :Informerer skolen om at der ikke er nogen ledige vikarer;
+|s|
+    :Modtager besked om at der ikke er nogen ledige vikarer;
+    stop
+
+else (ja)
+    |st|
+    :Informerer vikar;
+    |v|
+    :Modtager information;
+    :Tager til skolen;
+|s|
+    :Modtager vikar;
+stop
+
+
+@enduml
