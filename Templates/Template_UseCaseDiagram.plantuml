@@ -1,0 +1,24 @@
+@startuml
+left to right direction
+
+'Aktører
+actor Aktør1 as c
+actor Aktør2 as k
+
+'Projekt navn >
+package Projekt { 
+
+usecase "Use case 1" as US1
+usecase "Use case 2" as US2
+usecase "Use case 3" as US3
+usecase "Use case 4" as US4 
+}
+
+
+c --> US1
+c --> US2
+k --> US3
+k --> US4
+
+
+@enduml
