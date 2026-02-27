@@ -1,0 +1,45 @@
+@startuml
+hide circle
+skinparam classAttributeIconSize 0
+
+Co2Udledning "1..*" -- "1" Bremsekaliber
+Affald "1..*" -- "1" Bremsekaliber
+Energiforbrug "1..*" -- "1" Bremsekaliber
+Inspektion "1" -- "1..*" Co2Udledning
+Inspektion "1" -- "1..*" Affald
+Inspektion "1" -- "1..*" Energiforbrug
+
+Class BrakeCaliber
+{
+    +Weight : double
+    +RawMaterial : string
+    +Component : string
+    __
+    
+}
+
+Class Co2Discharge 
+{
+    +Discharge : double
+}
+
+Class Waste
+{
+    +WasteAmount : double
+    +Material : string
+}
+
+Class EnergyUse
+{
+    +Watt : double
+}
+
+Class Inspection
+{
+    +Date : DateTime
+    +Milestone : double
+    +MilestoneReached: bool
+    +Inspector : string
+}
+
+@enduml
