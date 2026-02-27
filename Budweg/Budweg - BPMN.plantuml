@@ -1,0 +1,31 @@
+@startuml
+title Order Processing Swimlanes
+
+|#Gray|s| System
+|#Green|l| Ledelse
+
+start
+:Går ind på dashboard;
+:opretter mål;
+
+|s|
+:åbner "opret mål" vindue;
+
+|l|
+:indtaster relevante mål;
+
+|s|
+if (er målet nået?) then (nej)
+    |s|
+    :mål er allerede opnået;
+    stop
+
+else (ja)
+    :opret andet mål;
+    |l|
+    :opretter andet mål;
+    stop
+
+endif
+
+@enduml
