@@ -1,0 +1,26 @@
+@startuml
+hide empty method
+hide footbox /' Fjerner aktør og system i bunden'/
+
+
+'Aktører'
+Actor ": Aktør" as L
+participant ":System" as S
+
+
+'Commands'
+L -> S: Metode 1  
+note right: Noter til metode
+
+S --> L: System-respons
+note right: Note 2
+
+group Alt [Alt 1]
+L -> S: Metode 2 
+note right: Noter til metode 2
+
+S --> L: System-respons
+
+end 
+
+@enduml

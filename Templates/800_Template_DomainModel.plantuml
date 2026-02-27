@@ -1,0 +1,37 @@
+@startuml
+hide circle
+hide empty members
+
+'Multiplicitet og association
+Klasse1 "1..*" -- "0..*" Klasse2
+Klasse1 "1..*" -- "0..*" Klasse3
+Klasse1 "1..*" -- "0..*" Klasse4
+
+
+'Konceptuelle klasser
+Class Klasse1
+{
+    attribut 1
+    attribut 2
+    attribut 3
+}
+
+Class Klasse2 
+{
+    attribut 1
+    attribut 2
+}
+
+Class Klasse3
+{
+   attribut 1
+   attribut 2
+}
+
+Class Klasse4
+{
+    attribut 1
+}
+
+
+@enduml
