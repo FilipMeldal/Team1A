@@ -2,12 +2,12 @@
 hide circle
 skinparam classAttributeIconSize 0
 
-Co2Udledning "1..*" -- "1" Bremsekaliber
-Affald "1..*" -- "1" Bremsekaliber
-Energiforbrug "1..*" -- "1" Bremsekaliber
-Inspektion "1" -- "1..*" Co2Udledning
-Inspektion "1" -- "1..*" Affald
-Inspektion "1" -- "1..*" Energiforbrug
+Co2Discharge "1..*" -- "1" BrakeCaliber
+Waste "1..*" -- "1" BrakeCaliber
+EnergyUse "1..*" -- "1" BrakeCaliber
+Inspection "1" -- "1..*" Co2Discharge
+Inspection "1" -- "1..*" Waste
+Inspection "1" -- "1..*" EnergyUse
 
 Class BrakeCaliber
 {
@@ -40,6 +40,66 @@ Class Inspection
     +Milestone : double
     +MilestoneReached: bool
     +Inspector : string
+}
+
+Class BrakeCaliberRepo
+{
+    - bc : BrakeCaliber
+    __
+    +bcAdd(brakeCaliber : Brakecaliber)
+    +bcGetAll() : List<BrakeCaliber>
+    +bcRemove(brakeCaliber : Brakecaliber)   
+    +bcGetById(id: int) : BrakeCaliber
+}
+
+Class InspectionRepo
+{
+-inspection : Inspection
+__
++inspecAdd(inspec : Inspection)
++inspecGetAll() : List<Inspection>
++inspecRemove(inspection : Inspection)
++InspecGetById(id : int) : Inspection
+3
+}
+
+
+Class Co2Repo
+{
+    -co2Discharge : Co2Discharge
+__
++Co2Add(co2 : Co2Discharge)
++Co2GetAll() : List<Co2Discharge>
++Co2Remove(co2 : Co2Discharge)
++Co2GetById(id : int) : Co2Discharge
+}
+
+Class WasteRepo
+{
+    -waste : Waste
+__
++WasteAdd(waste : Waste)
++WasteGetAll() : List<Waste>
++WasteRemove(waste : Waste)
++WasteGetById(id : int) : Waste
+}
+
+Class EnergyRepo
+{
+    -energyUse : EnergyUse
+__
++EnergyAdd(energy : EnergyUse)
++EnergyGetAll() : List<EnergyUse>
++EnergyRemove(energy : EnergyUse)
++EnergyGetById(id : int) : Energyuse
+}
+
+
+
+
+Class Controller
+{
+
 }
 
 @enduml
