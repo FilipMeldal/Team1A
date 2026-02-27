@@ -2,9 +2,9 @@
 hide circle
 hide empty members
 
-Co2Udledning "1..*" -- "0..*" Bremsekaliber
-Affald "1..*" -- "0..*" Bremsekaliber
-Energiforbrug "1..*" -- "0..*" Bremsekaliber
+Co2Udledning "1..*" -- "1" Bremsekaliber
+Affald "1..*" -- "1" Bremsekaliber
+Energiforbrug "1..*" -- "1" Bremsekaliber
 
 Class Bremsekaliber
 {
