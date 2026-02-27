@@ -10,8 +10,11 @@ start
 :Ringer til Gunbritt;
 |g|
 :Tager tlf;
+repeat 
 :-Finder kompetencer der matcher skolens behov
 -Finder ledige vikarer;
+repeat while (Så længe der er vikarer tilrådighed)
+
 |k|
 :Viser liste over alle vikarer;
 |g|

@@ -1,6 +1,6 @@
 @startuml
 hide empty method
-
+Title <u>Se Dashboard
 
 Actor ": Ledelse" as L
 participant ":System" as S
