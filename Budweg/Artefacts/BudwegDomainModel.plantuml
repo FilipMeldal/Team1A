@@ -4,10 +4,10 @@ hide empty members
 
 
 
-Co2Udledning "1..*" -- "1" Bremsekaliber
+CO2Udledning "1..*" -- "1" Bremsekaliber
 Affald "1..*" -- "1" Bremsekaliber
 Energiforbrug "1..*" -- "1" Bremsekaliber
-Inspektion "1" -- "1..*" Co2Udledning
+Inspektion "1" -- "1..*" CO2Udledning
 Inspektion "1" -- "1..*" Affald
 Inspektion "1" -- "1..*" Energiforbrug
 
