@@ -60,7 +60,6 @@ __
 +inspecGetAll() : List<Inspection>
 +inspecRemove(inspection : Inspection)
 +InspecGetById(id : int) : Inspection
-3
 }
 
 
