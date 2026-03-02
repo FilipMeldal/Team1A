@@ -19,7 +19,7 @@ Class Bremsekaliber
     komponenter
 }
 
-Class Co2Udledning 
+Class CO2Udledning 
 {
     udledning
 }
@@ -37,9 +37,10 @@ Class Energiforbrug
 
 Class Inspektion
 {
-    dato
-    mål
+    oprettelsesDato
     inspektør
+    mål
+    målDato
 }
 
 @enduml
