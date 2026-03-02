@@ -4,10 +4,10 @@ hide empty members
 
 
 
-Co2Udledning "1..*" -- "1" Bremsekaliber
+CO2Udledning "1..*" -- "1" Bremsekaliber
 Affald "1..*" -- "1" Bremsekaliber
 Energiforbrug "1..*" -- "1" Bremsekaliber
-Inspektion "1" -- "1..*" Co2Udledning
+Inspektion "1" -- "1..*" CO2Udledning
 Inspektion "1" -- "1..*" Affald
 Inspektion "1" -- "1..*" Energiforbrug
 
@@ -19,7 +19,7 @@ Class Bremsekaliber
     komponenter
 }
 
-Class Co2Udledning 
+Class CO2Udledning 
 {
     udledning
 }
@@ -37,9 +37,10 @@ Class Energiforbrug
 
 Class Inspektion
 {
-    dato
-    mål
+    oprettelsesDato
     inspektør
+    mål
+    målDato
 }
 
 @enduml
