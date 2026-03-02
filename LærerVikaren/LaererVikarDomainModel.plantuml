@@ -1,7 +1,7 @@
 @startuml
 hide circle
 hide method
-
+left to right direction
 
 
 Vikar "0..*" -- "0..*" Kalender
