@@ -9,6 +9,7 @@ Inspection "1" -- "1..*" Co2Discharge
 Inspection "1" -- "1..*" Waste
 Inspection "1" -- "1..*" EnergyUse
 
+
 Class BrakeCaliber
 {
     +Weight : double
@@ -98,6 +99,16 @@ __
 
 Class Controller
 {
+-energyRepo : EnergyRepo
+-wasteRepo : WasteRepo
+-co2Discharge : Co2Discharged
+..
++GetAllWaste() : List<Waste>
++GetSpecificWaste(wasteId : int) : Waste
++GetAllEnergy() : List<EnergyUse>
++GetSpecificWaste(energyId : int) : EnergyUse
++GetAllCo2() : List<Co2Discharge>
++GetSpecificWaste(co2Id : int) : Co2Discharge
 
 }
 
