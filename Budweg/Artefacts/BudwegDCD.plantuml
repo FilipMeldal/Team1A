@@ -45,7 +45,7 @@ Class Inspection
 
 Class BrakeCaliberRepo
 {
-    - bc : BrakeCaliber
+    -bc : BrakeCaliber
     __
     +bcAdd(brakeCaliber : Brakecaliber)
     +bcGetAll() : List<BrakeCaliber>
@@ -54,44 +54,44 @@ Class BrakeCaliberRepo
 }
 
 Class InspectionRepo
-{
--inspection : Inspection
-__
-+inspecAdd(inspec : Inspection)
-+inspecGetAll() : List<Inspection>
-+inspecRemove(inspection : Inspection)
-+InspecGetById(id : int) : Inspection
+{ 
+    -inspection : Inspection
+    __
+    +inspecAdd(inspec : Inspection)
+    +inspecGetAll() : List<Inspection>
+    +inspecRemove(inspection : Inspection)
+    +InspecGetById(id : int) : Inspection
 }
 
 
 Class Co2Repo
 {
     -co2Discharge : Co2Discharge
-__
-+Co2Add(co2 : Co2Discharge)
-+Co2GetAll() : List<Co2Discharge>
-+Co2Remove(co2 : Co2Discharge)
-+Co2GetById(id : int) : Co2Discharge
+    __
+    +Co2Add(co2 : Co2Discharge)
+    +Co2GetAll() : List<Co2Discharge>
+    +Co2Remove(co2 : Co2Discharge)
+    +Co2GetById(id : int) : Co2Discharge
 }
 
 Class WasteRepo
 {
     -waste : Waste
-__
-+WasteAdd(waste : Waste)
-+WasteGetAll() : List<Waste>
-+WasteRemove(waste : Waste)
-+WasteGetById(id : int) : Waste
+    __
+    +WasteAdd(waste : Waste)
+    +WasteGetAll() : List<Waste>
+    +WasteRemove(waste : Waste)
+    +WasteGetById(id : int) : Waste
 }
 
 Class EnergyRepo
 {
     -energyUse : EnergyUse
-__
-+EnergyAdd(energy : EnergyUse)
-+EnergyGetAll() : List<EnergyUse>
-+EnergyRemove(energy : EnergyUse)
-+EnergyGetById(id : int) : Energyuse
+    __
+    +EnergyAdd(energy : EnergyUse)
+    +EnergyGetAll() : List<EnergyUse>
+    +EnergyRemove(energy : EnergyUse)
+    +EnergyGetById(id : int) : Energyuse
 }
 
 
