@@ -1,0 +1,73 @@
+@startuml
+hide circle
+skinparam classAttributeIconSize 0
+
+CO2DISCHARGE "1..*" -- "1" BRAKECALIBER
+WASTE "1..*" -- "1" BRAKECALIBER
+ENERGYUSE "1..*" -- "1" BRAKECALIBER
+INSPECTION "1" -- "1..*" CO2DISCHARGE
+INSPECTION "1" -- "1..*" WASTE
+INSPECTION "1" -- "1..*" ENERGYUSE
+
+
+Class  BRAKECALIBER <<table>>
+{
+    <u> <<PK>> <<surrogate>> Id : Int
+    Weight : Float
+    RawMaterial : NVarChar(30)
+    Component : NVarChar(30)
+    __
+    <<PK>> PK_BrakeCaliber()
+}
+
+Class CO2DISCHARGE <<table>>
+{
+    <u> <<PK>> <<surrogate>> Id : Int
+    Discharge : Float
+    <i> <<FK>> BrakeCaliberId : Int
+    <i> <<FK>> InspectionId : Int
+    __
+    <<PK>> PK_Co2Discharge()
+    <<FK>> FK_Co2Discharge_BrakeCaliber(Id)
+    <<FK>> FK_Co2Discharge_Inspection(Id)
+}
+
+Class WASTE <<table>>
+{
+    <u> <<PK>> <<surrogate>> Id : Int
+    WasteAmount : Float
+    Material : NVarChar(30)
+    <i> <<FK>> BrakeCaliberId : Int
+    <i> <<FK>> InspectionId : Int
+    __
+    <<PK>> PK_Waste()
+    <<FK>> FK_Waste_BrakeCaliber(Id)
+    <<FK>> FK_Waste_Inspection(Id)
+}
+
+Class ENERGYUSE <<table>>
+{
+    <u> <<PK>> <<surrogate>> Id : Int
+    Watt : Float
+    <i> <<FK>> BrakeCaliberId : Int
+    <i> <<FK>> InspectionId : Int
+    __
+    <<PK>> PK_EnergyUse()
+    <<FK>> FK_EnergyUse_BrakeCaliber(Id)
+    <<FK>> FK_EnergyUse_Inspection(Id)
+}
+
+Class INSPECTION <<table>>
+{
+    <u> <<PK>> <<surrogate>> Id : Int
+    Date : DateTime2
+    Milestone : Float
+    MilestoneReached: Bit
+    Inspector : NVarChar(30)
+    __
+    <<PK>> PK_Inspection()
+}
+
+
+
+@enduml
