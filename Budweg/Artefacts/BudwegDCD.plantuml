@@ -53,7 +53,7 @@ Class BrakeCaliberRepo
 }
 
 Class InspectionRepo
-{
+{ 
     -inspection : Inspection
     __
     +inspecAdd(inspec : Inspection)
