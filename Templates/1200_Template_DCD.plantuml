@@ -1,0 +1,55 @@
+@startuml
+hide circles
+skinparam ClassAttributeIconSize 0
+skinparam PackageBorderStyle dashed
+
+Package ApplicationLayer
+{
+    
+Class First_Repository
+{
+    attribut
+    ..
+    + Metode
+}
+
+Class Second_Repository
+{
+    -Attribut
+    ..
+    +Metode
+}
+
+Class Controller <<controller>>
+{
+    -  attribut
+    ..
+   +Metode 
+}
+}
+
+Package DomainLayer
+{
+    class First_Class
+{
+    attribut
+    attribut
+    
+}
+
+class Second_Class
+{
+    attribut
+}
+
+}
+
+First_Class --> Second_Class
+Controller -down-> First_Repository
+Controller -up-> Second_Repository
+Second_Repository --> First_Class
+First_Repository --> Second_Class
+
+ApplicationLayer -up[hidden]-  DomainLayer
+
+@enduml

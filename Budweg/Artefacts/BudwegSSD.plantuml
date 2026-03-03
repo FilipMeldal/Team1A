@@ -1,20 +1,29 @@
 @startuml
 hide empty method
-Title <u>Se Dashboard
+Title <u>UC1 SSD - Opret mål
 
-Actor ": Ledelse" as L
-participant ":System" as S
+actor ": Ledelsen" as L
+participant ": System" as S
 
-L -> S: VisBD(list <Bremsekal>)  
-note right: BD: Bæredygtighedsdata
-S --> L: System viser BD(e,c,a)
-note right: e: energi, c: Co2-udledning, a: affaldstyper
+L -> S: VisDashboard()
+S --> L: System viser oversigt over bæredygtighedsdata
 
-group Alt [Valg af \n bæredygtighedsdata]
-L -> S: VisDetaljeretOversigt(b) 
-note right: b: alle bæredygtigheds energityper
-S --> L: "System viser graf"
+L -> S: VælgSætMål()
+S --> L: System viser formular for mål
+
+L -> S: IndtastMål(datatype, målværdi, måldato)
+note right
+datatype: valgt bæredygtighedsdata
+måldato: specifik dato for målet
+end note
+
+
+S --> L: VisOpdateretOversigt(datatype, målværdi, nuværendeData, fremdrift)
+note right
+Målet vises i oversigten,
+og fremdrift mod målet vises
+end note
+
 hide footbox
-end
 
 @enduml
