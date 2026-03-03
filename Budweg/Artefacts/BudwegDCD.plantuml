@@ -44,7 +44,7 @@ Class Inspection
 
 Class BrakeCaliberRepo
 {
-    - bc : BrakeCaliber
+    -bc : BrakeCaliber
     __
     +bcAdd(brakeCaliber : Brakecaliber)
     +bcGetAll() : List<BrakeCaliber>
@@ -54,7 +54,7 @@ Class BrakeCaliberRepo
 
 Class InspectionRepo
 {
--inspection : Inspection
+    -inspection : Inspection
 __
 +inspecAdd(inspec : Inspection)
 +inspecGetAll() : List<Inspection>
