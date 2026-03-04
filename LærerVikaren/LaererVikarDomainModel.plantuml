@@ -7,8 +7,8 @@ left to right direction
 Vikar "1..*" -- "0..*" Kalender
 Skole "1..*" -- "1..*" Vikar
 Vikar "1..*" -- "0..*" Arbejdstid
-Vikar "0..*" -- "1..*" Ledelse
-Skole "0..*" -- "1..*" Ledelse
+Vikar "0..*" -- "1..*" Ledelse_Gunbritt
+Skole "0..*" -- "1..*" Ledelse_Gunbritt
 
 
 Class Vikar 
@@ -43,7 +43,7 @@ Class Skole
     Email
     Tlf
 }
-Class Ledelse
+Class Ledelse_Gunbritt
 {
     Navn
     Email
