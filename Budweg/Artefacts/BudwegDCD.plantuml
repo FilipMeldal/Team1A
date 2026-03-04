@@ -2,10 +2,10 @@
 hide circle
 skinparam classAttributeIconSize 0
 
-Co2Discharge "1..*" -- "1" BrakeCaliber
+Co2Emission "1..*" -- "1" BrakeCaliber
 Waste "1..*" -- "1" BrakeCaliber
 EnergyUse "1..*" -- "1" BrakeCaliber
-Inspection "1" -- "1..*" Co2Discharge
+Inspection "1" -- "1..*" Co2Emission
 Inspection "1" -- "1..*" Waste
 Inspection "1" -- "1..*" EnergyUse
 
@@ -19,9 +19,9 @@ Class BrakeCaliber
     
 }
 
-Class Co2Discharge 
+Class Co2Emission 
 {
-    +Discharge : double
+    +Emission : double
 }
 
 Class Waste
@@ -66,12 +66,12 @@ Class InspectionRepo
 
 Class Co2Repo
 {
-    -co2Discharge : Co2Discharge
+    -co2Emission : Co2Emission
     __
-    +Co2Add(co2 : Co2Discharge)
-    +Co2GetAll() : List<Co2Discharge>
-    +Co2Remove(co2 : Co2Discharge)
-    +Co2GetById(id : int) : Co2Discharge
+    +Co2Add(co2 : Co2Emission)
+    +Co2GetAll() : List<Co2Emission>
+    +Co2Remove(co2 : Co2Emission)
+    +Co2GetById(id : int) : Co2Emission
 }
 
 Class WasteRepo
@@ -101,7 +101,7 @@ Class Controller
 {
 -energyRepo : EnergyRepo
 -wasteRepo : WasteRepo
--co2Discharge : Co2Discharged
+-co2Repo : Co2Repo
 ..
 +GetAllWaste() : List<Waste>
 +GetSpecificWaste(wasteId : int) : Waste
