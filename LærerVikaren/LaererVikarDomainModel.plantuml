@@ -4,11 +4,11 @@ hide method
 left to right direction
 
 
-Vikar "0..*" -- "0..*" Kalender
-Skole "0..*" -- "0..*" Vikar
-Vikar "0..*" -- "0..*" Arbejdstid
-Vikar "0..*" -- "0..*" Ledelse
-Skole "0..*" -- "0..*" Ledelse
+Vikar "1..*" -- "0..*" Kalender
+Skole "1..*" -- "1..*" Vikar
+Vikar "1..*" -- "0..*" Arbejdstid
+Vikar "0..*" -- "1..*" Ledelse
+Skole "0..*" -- "1..*" Ledelse
 
 
 Class Vikar 
