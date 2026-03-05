@@ -2,12 +2,12 @@
 hide circle
 skinparam classAttributeIconSize 0
 
-Co2Emission "1..*" -- "1" BrakeCaliber
-Waste "1..*" -- "1" BrakeCaliber
-EnergyUse "1..*" -- "1" BrakeCaliber
-Inspection "1" -- "1..*" Co2Emission
-Inspection "1" -- "1..*" Waste
-Inspection "1" -- "1..*" EnergyUse
+Co2Emission  <-->  BrakeCaliber
+Waste      <-->  BrakeCaliber
+EnergyUse  <-->  BrakeCaliber
+Inspection  <-->  Co2Emission
+Inspection  <-->  Waste
+Inspection  <-->  EnergyUse
 
 
 Class BrakeCaliber
