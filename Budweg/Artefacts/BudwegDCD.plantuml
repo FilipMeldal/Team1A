@@ -2,15 +2,15 @@
 hide circle
 skinparam classAttributeIconSize 0
 
-Co2Emission  <-->  BrakeCaliber
-Waste      <-->  BrakeCaliber
-EnergyUse  <-->  BrakeCaliber
-Inspection  <-->  Co2Emission
-Inspection  <-->  Waste
-Inspection  <-->  EnergyUse
+Co2Emission  <--  BrakeCaliper
+Waste      <--  BrakeCaliper
+EnergyUse  <--  BrakeCaliper
+Inspection  -->  Co2Emission
+Inspection  -->  Waste
+Inspection  -->  EnergyUse
 
 
-Class BrakeCaliber
+Class BrakeCaliper
 {
     +Weight : double
     +RawMaterial : string
@@ -43,21 +43,21 @@ Class Inspection
     +Inspector : string
 }
 
-Class BrakeCaliperRepo
+Class BrakeCaliberRepo
 {
-    -brakeCaliper : BrakeCaliber
+    -bc : BrakeCaliper
     __
-    +bcAdd(brakeCaliper : BrakeCaliber)
-    +bcGetAll() : List<BrakeCaliber>
-    +bcRemove(brakeCaliper : BrakeCaliber)   
-    +bcGetById(id: int) : BrakeCaliber
+    +bcAdd(brakeCaliper : Brakecaliper)
+    +bcGetAll() : List<BrakeCaliper>
+    +bcRemove(brakeCaliper : Brakecaliper)   
+    +bcGetById(id: int) : BrakeCaliper
 }
 
 Class InspectionRepo
 { 
     -inspection : Inspection
     __
-    +inspecAdd(inspec : Inspection)
+    +inspecAdd(inspection : Inspection)
     +inspecGetAll() : List<Inspection>
     +inspecRemove(inspection : Inspection)
     +InspecGetById(id : int) : Inspection
@@ -91,8 +91,11 @@ Class EnergyRepo
     +EnergyAdd(energy : EnergyUse)
     +EnergyGetAll() : List<EnergyUse>
     +EnergyRemove(energy : EnergyUse)
-    +EnergyGetById(id : int) : EnergyUse
+    +EnergyGetById(id : int) : Energyuse
 }
+
+
+
 
 Class Controller
 {
@@ -103,9 +106,9 @@ Class Controller
 +GetAllWaste() : List<Waste>
 +GetSpecificWaste(wasteId : int) : Waste
 +GetAllEnergy() : List<EnergyUse>
-+GetSpecificEnergy(energyId : int) : EnergyUse
-+GetAllCo2() : List<Co2Emission>
-+GetSpecificCo2(co2Id : int) : Co2Emission
++GetSpecificWaste(energyId : int) : EnergyUse
++GetAllCo2() : List<Co2Discharge>
++GetSpecificWaste(co2Id : int) : Co2Discharge
 
 }
 
