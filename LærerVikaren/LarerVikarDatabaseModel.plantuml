@@ -1,46 +1,64 @@
 @startuml
 hide circle
-left to right direction
+hide empty members
 
 
-Substitute "1..*" -- "0..*" Calendar
-School "1..*" -- "1..*" Substitute
-Substitute "0..*" -- "1..*" Management_Gunbritt
-School "0..*" -- "1..*" Management_Gunbritt
 
 
-Class Substitute 
+
+SUBSTITUTE_MANAGMENT_GUNBRITT "1..*" -- "1..*" Management_Gunbritt
+SUBSTITUTE_MANAGMENT_GUNBRITT "1..*" -- "1..*" Substitute
+
+
+Class Substitute <<table>>
 {
-    Name : string
-    Phone : string
+   <<PK>> <<surrogate>> SubstituteID : int
+    Name : NVarChar(255)
+    Phone : NVarChar(255)
+    Subject : NVarChar(255)
     Cpr : int
     Age : int
-    Subject : string
+    
+    <<PK>> PK_Substitute()
 }
 
-Class Calendar 
+' Class Calendar <<table>>
+' {
+
+'     Avalibility : Bit
+'     WorkingHours : Float
+'     Date : DateTime2
+'     Subject : NVarChar(255)
+    
+
+' }
+
+' Class School <<table>>
+' {
+'     Name : NVarChar(255)
+'     Address : NVarChar(255)
+'     City :  NVarChar(255)
+'     Email : NVarChar(255)
+'     Phone : NVarChar(255)
+' }
+
+Class Management_Gunbritt <<table>>
 {
-    Avalibility : boolean
-    WorkingHours : double
-    Date : DateTime
-    Subject : string
+    <<PK>> <<surrogate>> ManagementID : int
+    Name : NVarChar(255)
+    Email : NVarChar(255)
+    Phone : NVarChar(255)
+    --
+    <<PK>> PK_Management()
 }
-
-Class School
+CLass SUBSTITUTE_MANAGMENT_GUNBRITT <<table>>
 {
-    Name : string
-    Address : string
-    City : string
-    Email : string
-    Phone : string
+    <<PK>> <<FK1>> SubstituteID : int
+    <<PK>> <<FK2>> ManagementID : int
+    --
+    <<PK>> PK_SubstituteManagement()
+    <<FK1>> FK_SubstituteManagement_Substitute(SubstituteID)
+    <<FK2>> FK_SubstituteManagement_Management(ManagementID)
 }
-
-Class Management_Gunbritt
-{
-    Name : string
-    Email : string
-    Phone : string
-}
-
 
 @enduml
