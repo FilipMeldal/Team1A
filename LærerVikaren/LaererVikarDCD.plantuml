@@ -1,47 +1,90 @@
 @startuml
 hide circle
-left to right direction
+skinparam ClassAttributeIconSize 0
+skinparam PackageBorderStyle dashed
 
-
-Substitute "1..*" -- "0..*" Calendar
-School "1..*" -- "1..*" Substitute
-Substitute "0..*" -- "1..*" Management_Gunbritt
-School "0..*" -- "1..*" Management_Gunbritt
-
-
-Class Substitute 
+Package ApplicationLayer
 {
-    +Name : string
-    +Phone : string
-    +Cpr : int
-    +Age : int
-    +Subject : string
+    Class SubstituteRepo
+    {
+        - substitutes : List<Substitute>
+        __
+        +Create() : List<Substitute>
+        +Update(substitute : Substitute)
+        +Delete(substitute : Substitute) 
+    }
+
+    Class ManagementRepo
+    {
+        - managements : List<Management_Gunbritt>
+        __
+        +Create() : List<Management_Gunbritt>
+        +Update(management : Management_Gunbritt)
+        +Delete(management : Management_Gunbritt) 
+    }
+    Class Controller <<controller>>
+    {
+        - _substituteRepo : SubstituteRepo
+        - _managementRepo : ManagementRepo
+        ..
+        + SubstituteAdd(substitute : Substitute)
+        + SubstituteDelete(substitute : Substitute)
+        + ManagementAdd(management : Management_Gunbritt) 
+        + ManagementDelete(management : Management_Gunbritt)
+        + GetAll ()    
+    }
+
 }
 
-Class SubstituteRepo
-Class Calendar 
+Package DomainLayer
 {
-    Avalibility : boolean
-    WorkingHours : double
-    Date : DateTime
-    Subject : string
+
+    Class Substitute 
+    {
+        +Name : string
+        +Phone : string
+        +Cpr : int
+        +Age : int
+        +Subject : string
+    }
+
+
+    Class Calendar 
+    {
+        +Avalibility : boolean
+        +WorkingHours : double
+        +Date : DateTime
+        +Subject : string
+    }
+
+    Class School
+    {
+        +Name : string
+        +Address : string
+        +City : string
+        +Email : string
+        +Phone : string
+    }
+
+    Class Management_Gunbritt
+    {
+        +Name : string
+        +Email : string
+        +Phone : string
+    }
 }
 
-Class School
-{
-    Name : string
-    Address : string
-    City : string
-    Email : string
-    Phone : string
-}
+Substitute -up-> Calendar
+School <-- Substitute
+Substitute <-- Management_Gunbritt
+School --> Management_Gunbritt
 
-Class Management_Gunbritt
-{
-    Name : string
-    Email : string
-    Phone : string
-}
+SubstituteRepo -right-> Substitute
+ManagementRepo -right-> Management_Gunbritt
 
+Controller -down-> ManagementRepo
+Controller -up-> SubstituteRepo
+
+ApplicationLayer -right[hidden]- DomainLayer
 
 @enduml
