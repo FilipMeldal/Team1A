@@ -1,0 +1,47 @@
+@startuml
+hide circle
+left to right direction
+
+
+Substitute "1..*" -- "0..*" Calendar
+School "1..*" -- "1..*" Substitute
+Substitute "0..*" -- "1..*" Management_Gunbritt
+School "0..*" -- "1..*" Management_Gunbritt
+
+
+Class Substitute 
+{
+    +Name : string
+    +Phone : string
+    +Cpr : int
+    +Age : int
+    +Subject : string
+}
+
+Class SubstituteRepo
+Class Calendar 
+{
+    Avalibility : boolean
+    WorkingHours : double
+    Date : DateTime
+    Subject : string
+}
+
+Class School
+{
+    Name : string
+    Address : string
+    City : string
+    Email : string
+    Phone : string
+}
+
+Class Management_Gunbritt
+{
+    Name : string
+    Email : string
+    Phone : string
+}
+
+
+@enduml
