@@ -43,13 +43,13 @@ Class Inspection
     +Inspector : string
 }
 
-Class BrakeCaliberRepo
+Class BrakeCaliperRepo
 {
-    -bc : BrakeCaliber
+    -brakeCaliper : BrakeCaliber
     __
-    +bcAdd(brakeCaliber : Brakecaliber)
+    +bcAdd(brakeCaliper : BrakeCaliber)
     +bcGetAll() : List<BrakeCaliber>
-    +bcRemove(brakeCaliber : Brakecaliber)   
+    +bcRemove(brakeCaliper : BrakeCaliber)   
     +bcGetById(id: int) : BrakeCaliber
 }
 
@@ -91,11 +91,8 @@ Class EnergyRepo
     +EnergyAdd(energy : EnergyUse)
     +EnergyGetAll() : List<EnergyUse>
     +EnergyRemove(energy : EnergyUse)
-    +EnergyGetById(id : int) : Energyuse
+    +EnergyGetById(id : int) : EnergyUse
 }
-
-
-
 
 Class Controller
 {
@@ -106,9 +103,9 @@ Class Controller
 +GetAllWaste() : List<Waste>
 +GetSpecificWaste(wasteId : int) : Waste
 +GetAllEnergy() : List<EnergyUse>
-+GetSpecificWaste(energyId : int) : EnergyUse
-+GetAllCo2() : List<Co2Discharge>
-+GetSpecificWaste(co2Id : int) : Co2Discharge
++GetSpecificEnergy(energyId : int) : EnergyUse
++GetAllCo2() : List<Co2Emission>
++GetSpecificCo2(co2Id : int) : Co2Emission
 
 }
 

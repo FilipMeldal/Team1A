@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Dashboard.ViewModels
 {
-    internal class MainViewModel
+    public class MainViewModel
     {
     }
 }
