@@ -1,0 +1,50 @@
+@startuml
+hide circle
+skinparam classAttributeIconSize 0
+
+Class1 "1" -- "*" Class2
+Class1 "1" -- "*" Class3
+Class1 "1" -- "*" Class4
+Class2 "1" -- "*" Class3
+
+
+Class  Class1 <<table>>
+{
+    <u> <<PK>> <<surrogate>> Id : Int
+    __
+    <<PK>> PK_Class1()
+}
+
+Class Class2 <<table>>
+{
+    <u> <<PK>> <<surrogate>> Id : Int
+    Discharge : Float
+    <i> <<FK>> Class1 : Int
+    <i> <<FK>> Class4 : Int
+    __
+    <<PK>> PK_Class2()
+    <<FK>> FK_Class2_Class1(Id)
+}
+
+Class Class3 <<table>>
+{
+    <u> <<PK>> <<surrogate>> Id : Int
+    <i> <<FK>> Class1Id : Int
+    <i> <<FK>> Class2Id : Int
+    __
+    <<PK>> PK_Class3()
+    <<FK>> FK_Class3_Class1(Id)
+    <<FK>> FK_Class3_Class2(Id)
+}
+
+Class Class4 <<table>>
+{
+    <u> <<PK>> <<surrogate>> Id : Int
+    <i> <<FK>> Class1Id : Int
+    __
+    <<PK>> PK_Class4()
+    <<FK>> FK_Class4_Class1(Id)
+}
+
+
+@enduml
